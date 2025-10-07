@@ -383,7 +383,7 @@ class TestBusquedaLibrosPorAutor:
         ).json()
 
         # Crear 15 copias (como en el diálogo: "quince")
-        for i in range(15):
+        for _ in range(15):
             client.post("/copias/", json={"libro_id": libro["id"]})
 
         # Verificar cantidad de copias
